@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+import player
 from logger import log_state
 
 def main():
@@ -20,6 +21,13 @@ def main():
             pass
 
         screen.fill(000000)
+
+        x = SCREEN_WIDTH / 2
+        y = SCREEN_HEIGHT / 2
+
+        my_player = player.Player(x, y, PLAYER_RADIUS)
+
+        my_player.draw(screen)
 
         pygame.display.flip()
 
